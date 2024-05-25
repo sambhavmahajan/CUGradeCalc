@@ -1,4 +1,3 @@
-```markdown
 # Grade Calculator
 
 This Java program calculates grades for students based on a specified grading system. It follows the grading criteria provided by Chandigarh University, as outlined in the requirements.
@@ -24,4 +23,3 @@ The grading system is based on the criteria provided by Chandigarh University, a
 ## License
 
 This program is licensed under the [MIT License](LICENSE.txt).
-```
