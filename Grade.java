@@ -1,50 +1,46 @@
-import java.util.*;
-public class Grade {
-	public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+import java.util.Scanner;
 
-        System.out.println("Enter the mean (average) marks for the subject:");
-        double mean = scanner.nextDouble();
-        System.out.println("Enter the variance of marks for the subject:");
-        double variance = scanner.nextDouble();
-        double stdDeviation = Math.sqrt(variance);
+public class Grade {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the highest marks obtained in the class:");
-        double highestMarks = scanner.nextDouble();
+        double highestMarks = sc.nextDouble();
 
+        // Input for student's marks
         System.out.println("Enter the student's marks:");
-        double studentMarks = scanner.nextDouble();
+        double studentMarks = sc.nextDouble();
 
-        double zScore = (studentMarks - mean) / stdDeviation;
-        String grade;
-        if (studentMarks < 0.35 * highestMarks) {
-            grade = "F";
-        } else if (studentMarks > 0.50 * highestMarks) {
-            grade = calculateGrade(zScore);
-        } else {
-            grade = calculateGrade(zScore);
-        }
+        String grade = calculateGrade(highestMarks, studentMarks);
 
         System.out.println("Grade: " + grade);
 
-        scanner.close();
+        sc.close();
     }
 
-    public static String calculateGrade(double zScore) {
-        if (zScore >= 1.282) {
-            return "A⁺";
-        } else if (zScore >= 0.841) {
-            return "A";
-        } else if (zScore >= 0.675) {
-            return "B⁺";
-        } else if (zScore >= 0.524) {
-            return "B";
-        } else if (zScore >= 0.385) {
-            return "C⁺";
-        } else if (zScore >= 0.253) {
+    public static String calculateGrade(double highestMarks, double studentMarks) {
+        double percentage = (studentMarks / highestMarks) * 100;
+
+        if (percentage < 35) {
+            return "F";
+        } else if (percentage >= 35 && percentage <= 50) {
             return "C";
-        } else if (zScore >= 0.126) {
-            return "D";
+        } else if (percentage > 50) {
+            if (percentage >= 90) {
+                return "A⁺";
+            } else if (percentage >= 80) {
+                return "A";
+            } else if (percentage >= 70) {
+                return "B⁺";
+            } else if (percentage >= 60) {
+                return "B";
+            } else if (percentage >= 50) {
+                return "C⁺";
+            } else if (percentage >= 40) {
+                return "C";
+            } else {
+                return "D";
+            }
         } else {
             return "E";
         }
