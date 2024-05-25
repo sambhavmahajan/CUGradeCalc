@@ -1,64 +1,27 @@
+```markdown
 # Grade Calculator
 
-This Java program calculates the grade of a student based on their marks relative to the class's mean and variance.
+This Java program calculates grades for students based on a specified grading system. It follows the grading criteria provided by Chandigarh University, as outlined in the requirements.
 
 ## How to Use
 
-1. **Input Mean and Variance:**
-   - When prompted, enter the mean (average) marks for the subject.
-   - Enter the variance of marks for the subject.
+1. Clone this repository or download the `Grade.java` file.
+2. Compile the `Grade.java` file using a Java compiler:
+   ```
+   javac Grade.java
+   ```
+3. Run the compiled program:
+   ```
+   java Grade
+   ```
+4. Follow the prompts to input the highest marks obtained in the class and the student's marks.
+5. The program will calculate and display the assigned grade for the student based on the provided criteria.
 
-2. **Input Highest Marks:**
-   - Enter the highest marks obtained in the class.
+## Grading Criteria
 
-3. **Input Student's Marks:**
-   - Enter the student's marks.
+The grading system is based on the criteria provided by Chandigarh University, as outlined in the program. It includes specific rules for assigning grades based on the percentage of marks obtained by the student relative to the highest marks in the class.
 
-4. **View Grade:**
-   - The program will calculate the grade based on the entered data and display it.
+## License
 
-## Grade Calculation
-
-The grade is determined based on the student's marks relative to the class's highest marks and the calculated z-score.
-
-- **Z-Score Calculation:** The z-score measures how many standard deviations a data point is from the mean. It's calculated using the formula:
-  \[ Z = \frac{(X - \mu)}{\sigma} \]
-  Where:
-  - \( X \) is the student's marks.
-  - \( \mu \) is the mean of the class.
-  - \( \sigma \) is the standard deviation of the class.
-
-- **Grade Mapping:** The z-score is mapped to a grade according to the following criteria:
-  - If the student's marks are less than 35% of the highest marks, the grade is "F".
-  - If the student's marks are more than 50% of the highest marks, the grade is determined by the z-score using the standard grading scale.
-
-## Grade Scale
-
-The program uses the following grade scale based on the z-score:
-
-- A⁺: z-score ≥ 1.282
-- A: z-score ≥ 0.841
-- B⁺: z-score ≥ 0.675
-- B: z-score ≥ 0.524
-- C⁺: z-score ≥ 0.385
-- C: z-score ≥ 0.253
-- D: z-score ≥ 0.126
-- E: Otherwise
-
-## Example
-
-Here's an example run of the program:
-
+This program is licensed under the [MIT License](LICENSE.txt).
 ```
-Enter the mean (average) marks for the subject: 75
-Enter the variance of marks for the subject: 100
-Enter the highest marks obtained in the class: 100
-Enter the student's marks: 80
-Grade: A⁺
-```
-
-In this example, the mean marks are 75, the variance is 100, the highest marks in the class are 100, and the student's marks are 80, resulting in a grade of A⁺.
-
-## Author
-
-This program was authored by Sambhav Mahajan.
