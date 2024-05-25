@@ -1,6 +1,6 @@
 # Grade Calculator
 
-This Java program calculates grades for students based on a specified grading system. It tries to estimate how their grading system works.
+This Java program calculates grades for students based on a specified grading system. It tries to estimate how universities grade students.
 
 ## How to Use
 
