@@ -1,6 +1,6 @@
 # Grade Calculator
 
-This Java program calculates grades for students based on a specified grading system. It follows the grading criteria provided by Chandigarh University, as outlined in the requirements.
+This Java program calculates grades for students based on a specified grading system. It tries to estimate how their grading system works.
 
 ## How to Use
 
